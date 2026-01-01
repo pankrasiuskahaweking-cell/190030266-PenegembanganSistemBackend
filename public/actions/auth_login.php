@@ -1,8 +1,5 @@
 <?php
-/**
- * Handle login form submission.
- * Expects POST: username, password
- */
+
 require_once __DIR__ . '/../../config/db_connection.php';
 require_once __DIR__ . '/../../helpers/sanitize.php';
 require_once __DIR__ . '/../../helpers/auth_helper.php';
@@ -29,7 +26,7 @@ $stmt->execute([$username]);
 $user = $stmt->fetch();
 
 if (!$user || !password_verify($password, $user['password'])) {
-    // Authentication failed
+  
     $error = 'Invalid credentials.';
     require_once __DIR__ . '/../../views/header.php';
     require_once __DIR__ . '/../../views/auth/login_form.php';
@@ -37,7 +34,7 @@ if (!$user || !password_verify($password, $user['password'])) {
     exit;
 }
 
-// Successful login
+
 login_user($user);
 header('Location: ' . '/public/dashboard.php');
 exit;

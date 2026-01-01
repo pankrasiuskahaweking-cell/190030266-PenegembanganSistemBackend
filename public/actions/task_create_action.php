@@ -1,8 +1,5 @@
 <?php
-/**
- * Handle task creation for the logged-in user.
- * Expects POST: title, description, due_date
- */
+
 require_once __DIR__ . '/../../config/db_connection.php';
 require_once __DIR__ . '/../../helpers/auth_helper.php';
 require_once __DIR__ . '/../../helpers/sanitize.php';

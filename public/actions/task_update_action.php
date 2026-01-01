@@ -1,7 +1,5 @@
 <?php
-/**
- * Handle task update. Expects POST: id, title, description, due_date
- */
+
 require_once __DIR__ . '/../../config/db_connection.php';
 require_once __DIR__ . '/../../helpers/auth_helper.php';
 require_once __DIR__ . '/../../helpers/sanitize.php';
@@ -25,7 +23,7 @@ if ($id <= 0 || $title === '') {
 
 $pdo = getPDO();
 
-// Ensure the task belongs to the current user
+
 $check = $pdo->prepare('SELECT user_id FROM tasks WHERE id = ? LIMIT 1');
 $check->execute([$id]);
 $row = $check->fetch();
@@ -42,7 +40,7 @@ try {
 } catch (PDOException $e) {
     $error = 'Failed to update task.';
     require_once __DIR__ . '/../../views/header.php';
-    // Re-render form with current values
+    
     $task = ['id' => $id, 'title' => $title, 'description' => $description, 'due_date' => $due_date];
     $actionUrl = '/public/actions/task_update_action.php';
     require_once __DIR__ . '/../../views/tasks/task_form.php';

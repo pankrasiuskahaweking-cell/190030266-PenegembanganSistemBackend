@@ -1,10 +1,5 @@
 <?php
-/**
- * Authentication helper functions.
- * - session handling
- * - simple login/logout helpers
- * - require_login() to protect pages
- */
+
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();

@@ -1,8 +1,5 @@
 <?php
-/**
- * Toggle a task's status between 'pending' and 'completed'.
- * Expects POST: id
- */
+
 require_once __DIR__ . '/../../config/db_connection.php';
 require_once __DIR__ . '/../../helpers/auth_helper.php';
 

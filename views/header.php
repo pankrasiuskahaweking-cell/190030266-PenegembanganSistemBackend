@@ -1,5 +1,5 @@
 <?php
-// Shared header included on most pages
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }

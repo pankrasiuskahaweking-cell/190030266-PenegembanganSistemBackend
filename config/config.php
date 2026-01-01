@@ -1,9 +1,5 @@
 <?php
-/**
- * Application configuration.
- * NOTE: For production, override these with environment variables
- * and do NOT commit secrets to version control.
- */
+
 define('DB_HOST', '127.0.0.1');
 define('DB_NAME', 'todo_app');
 define('DB_PORT', '3307');

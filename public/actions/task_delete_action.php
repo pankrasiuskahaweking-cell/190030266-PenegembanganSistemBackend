@@ -1,7 +1,5 @@
 <?php
-/**
- * Delete a task. Expects POST: id
- */
+
 require_once __DIR__ . '/../../config/db_connection.php';
 require_once __DIR__ . '/../../helpers/auth_helper.php';
 
@@ -20,7 +18,7 @@ if ($id <= 0) {
 
 $pdo = getPDO();
 
-// Delete only if belongs to user
+
 $del = $pdo->prepare('DELETE FROM tasks WHERE id = ? AND user_id = ?');
 $del->execute([$id, $_SESSION['user_id']]);
 

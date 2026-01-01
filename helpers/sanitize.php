@@ -1,7 +1,5 @@
 <?php
-/**
- * Small sanitization helpers used server-side.
- */
+
 
 function sanitize_text($str)
 {
