@@ -10,7 +10,7 @@ function sanitize_text($str)
 
 function sanitize_date($date)
 {
-    // Accepts YYYY-MM-DD or empty
+    
     $date = trim($date);
     if ($date === '') return null;
     $d = DateTime::createFromFormat('Y-m-d', $date);

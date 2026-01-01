@@ -9,14 +9,14 @@ require_once __DIR__ . '/../helpers/sanitize.php';
 
 $user_id = $_SESSION['user_id'];
 
-// Search and filter parameters (via GET)
+
 $search = isset($_GET['search']) ? trim($_GET['search']) : '';
 $statusFilter = isset($_GET['status']) ? $_GET['status'] : 'all';
 if (!in_array($statusFilter, ['all', 'pending', 'completed'], true)) {
   $statusFilter = 'all';
 }
 
-// Build query with prepared statements. We always filter by user_id to ensure isolation.
+
 $pdo = getPDO();
 $sql = 'SELECT id, title, status, due_date, created_at FROM tasks WHERE user_id = ?';
 $params = [$user_id];
@@ -27,7 +27,7 @@ if ($statusFilter !== 'all') {
 }
 
 if ($search !== '') {
-  // Use LIKE for portability. For better performance, add a FULLTEXT index (see sql/optional_indexes.sql).
+  
   $sql .= ' AND (title LIKE ? OR description LIKE ?)';
   $like = '%' . $search . '%';
   $params[] = $like;

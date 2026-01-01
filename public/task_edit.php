@@ -16,7 +16,7 @@ $stmt = $pdo->prepare('SELECT id, title, description, due_date FROM tasks WHERE 
 $stmt->execute([$id, $_SESSION['user_id']]);
 $task = $stmt->fetch();
 if (!$task) {
-    // Task not found or not owned by user
+    
     header('Location: /public/dashboard.php');
     exit;
 }

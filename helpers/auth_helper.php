@@ -25,14 +25,14 @@ function require_login()
 
 function login_user(array $user)
 {
-    // stores minimal user data in session
+   
     $_SESSION['user_id'] = $user['id'];
     $_SESSION['username'] = $user['username'];
 }
 
 function logout_user()
 {
-    // clear session securely
+    
     $_SESSION = [];
     if (ini_get('session.use_cookies')) {
         $params = session_get_cookie_params();
