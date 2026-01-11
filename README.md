@@ -4,10 +4,12 @@ Deskripsi Singkat
 Aplikasi To Do List adalah aplikasi berbasis web yang digunakan untuk membantu pengguna dalam mencatat, mengelola, dan memantau daftar tugas atau pekerjaan yang harus diselesaikan. Aplikasi ini menyediakan fitur utama seperti menambahkan tugas baru, mengedit tugas, menghapus tugas, serta menampilkan daftar tugas secara terstruktur sehingga pengguna dapat mengelola waktu dan pekerjaan dengan lebih efektif.
 
 Daftar Anggota
-No	Nama	NIM		
-1	Nama Anggota 1	NIM1	github1	Backend Developer (logika aplikasi & database)
-2	Nama Anggota 2	NIM2	github2	Frontend Developer (tampilan antarmuka)
-3	Nama Anggota 3	NIM3	github3	Dokumentasi & Testing
+No	Nama	NIM	 Peran
+1	Ridho Satria Ramadhan (190030266)	: Mengembangkan Aplikasi To Do List
+2	Alexandro Eka Willian Se (240030332) : Membantu Membuat Dokumentasi
+3	Pankrasius Kaha Weking (240030300) : Membantu Membuat Dokumentasi
+4.I Made Bagus Swaharta (240030330)  : Membantu Membuat Dokumentasi
+
 Lingkungan Pengembangan
 Alat dan teknologi yang digunakan dalam pengembangan aplikasi ini meliputi:
 •	Bahasa Pemrograman: PHP
